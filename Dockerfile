@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER ivar.holmqvist@no-bull.se
 LABEL somekey=somevalue
 ARG test_arg
