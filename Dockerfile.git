@@ -1,0 +1,12 @@
+FROM ubuntu:16.04
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update
+RUN apt-get install -y python telnet
+RUN apt-get install -y git-daemon-sysvinit
+RUN apt-get install -y man
+RUN apt-get install -y gitweb
+
+ENTRYPOINT ["/usr/bin/git"]
+CMD ["daemon", "--export-all", "--enable=upload-archive", "/repos"]
